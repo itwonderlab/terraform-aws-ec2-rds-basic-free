@@ -10,10 +10,10 @@
   #----------------------
   # PRO
   #----------------------
-  module "aws_rds_sn_pro_01" {
+  module "aws_rds_sn_pub_pro_01" {
     source      = "./modules/aws/rds/subnet"
-    name        = "${var.aws_rds_sn_pro_01["name"]}"
-    description = "${var.aws_rds_sn_pro_01["description"]}"
+    name        = "${var.aws_rds_sn_pub_pro_01["name"]}"
+    description = "${var.aws_rds_sn_pub_pro_01["description"]}"
 
     # Add 2 PRIVATE Subnets from two availability zones
     subnet_ids  = "${module.aws_sn_za_pro_pub_32.id},${module.aws_sn_zb_pro_pub_36.id}"

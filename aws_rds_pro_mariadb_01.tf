@@ -45,7 +45,7 @@ module "aws_rds_pro_mariadb_01" {
   availability_zone       = "${var.aws_rds_pro_mariadb_01["availability_zone"]}"
   backup_retention_period = "${var.aws_rds_pro_mariadb_01["backup_retention_period"]}"
 
-  db_subnet_group_name    = "${module.aws_rds_sn_pro_01.id}" #"${var.aws_rds_sn_pro_01["name"]}"
+  db_subnet_group_name    = "${module.aws_rds_sn_pub_pro_01.id}" #"${var.aws_rds_sn_pro_01["name"]}"
 
   # Workaround for dependency. We need Terraform to wait for aws_rds_sn_pro_01 creation before the RDS DB can use it.
 

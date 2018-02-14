@@ -27,9 +27,6 @@ is_production = false
   aws_vpc_tag_name  = "ditwl-vpc"
   aws_vpc_block     = "172.17.32.0/19" #172.17.32.1 - 172.17.63.254
 
-  internet_gw       = "ditwl-internet-gw"
-  main_route_name   = "ditwl-route-main"
-
 #------------------------
 # SUBNETS
 #------------------------
@@ -73,10 +70,12 @@ is_production = false
     #------------------------
     # For RDS instances
     #------------------------
-    aws_rds_sn_pro_01 = {
+    aws_rds_sn_pub_pro_01 = {
       name        = "ditwl-rds-sn-pub-pro-01"
       description = "ditwl-RDS-SN-pub-PRO-01"
-      subnet_ids  = #See aws_rds_sn_pro.tf "${module.aws_sn_za_pro_pub_32.id},${module.aws_sn_zb_pro_pub_36.id}"
+
+      #See aws_rds_sn_pro.tf for subnet_ids
+      #subnet_ids  = ${module.aws_sn_za_pro_pub_32.id},${module.aws_sn_zb_pro_pub_36.id}"
     }
 
 
