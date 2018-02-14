@@ -103,11 +103,6 @@ variable db_subnet_group_name {
   default     = ""
 }
 
-variable db_subnet_group_id {
-  description = "(Optional) ID of DB subnet group. DB instance will be created in the VPC associated with the DB subnet group. If unspecified, will be created in the default VPC"
-  default     = ""
-}
-
 variable parameter_group_name {
   description = "(Optional) Name of the DB parameter group to associate."
   default     = ""

@@ -16,7 +16,7 @@ is_production = false
   # DEFAULT AWS
   provider_default_aws_profile    = "ditwl_infradmin"
   provider_default_aws_region     = "us-east-1" #US East (N. Virginia), Cheapests region as https://www.concurrencylabs.com/blog/choose-your-aws-region-wisely/
-  provider_default_aws_account_id = ["#################"]
+  provider_default_aws_account_id = [""]
   provider_default_aws_shared_credentials_file = "~/.aws/credentials"
   provider_default_aws_key_file = "~/keys/ditwl_kp_infradmin.pem"
 
@@ -84,9 +84,9 @@ is_production = false
 #------------------------
 
 aws_main_route_table_name = "ditwl-rt-pub-main"
-aws_internet_gw_name = "ditwl-igw-main-public"
+aws_internet_gw_name = "ditwl-igw-pub"
 aws_internet_route = {
-  name = "ditwl-internet-route"
+  name = "ditwl-ir"
   destination_cidr_block = "0.0.0.0/0"
 }
 aws_private_route_table_za_name = "ditwl-rt-pri-za"

@@ -42,8 +42,7 @@ resource "aws_db_instance" "default" {
     map("app"         , var.tag_app),
     map("app_id"      , var.tag_app_id),
     map("os"          , var.tag_os),
-    map("cost_center" , var.tag_cost_center),
-    map("db_subnet_group_id", var.db_subnet_group_id)
+    map("cost_center" , var.tag_cost_center)
     )}"
 
 }
