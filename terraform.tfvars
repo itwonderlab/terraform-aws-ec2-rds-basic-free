@@ -74,8 +74,9 @@ is_production = false
     # For RDS instances
     #------------------------
     aws_rds_sn_pro_01 = {
-      name        = "ditwl-rds-sn-pro-01"
-      description = "ditwl-RDS-SN-PRO-01"
+      name        = "ditwl-rds-sn-pub-pro-01"
+      description = "ditwl-RDS-SN-pub-PRO-01"
+      subnet_ids  = #See aws_rds_sn_pro.tf "${module.aws_sn_za_pro_pub_32.id},${module.aws_sn_zb_pro_pub_36.id}"
     }
 
 

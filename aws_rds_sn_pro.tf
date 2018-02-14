@@ -15,6 +15,8 @@
     name        = "${var.aws_rds_sn_pro_01["name"]}"
     description = "${var.aws_rds_sn_pro_01["description"]}"
 
-    # Add PRIVATE Subnets from two availability zones
+    # Add 2 PRIVATE Subnets from two availability zones
     subnet_ids  = "${module.aws_sn_za_pro_pub_32.id},${module.aws_sn_zb_pro_pub_36.id}"
+    # Add 1 PRIVATE Subnets from two availability zones
+    #subnet_ids  = "${module.aws_sn_za_pro_pub_32.id}"
   }
