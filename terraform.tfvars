@@ -98,16 +98,6 @@ aws_private_route_table_zb_name = "ditwl-rt-pri-zb"
 #------------------------
 
   #------------------------
-  # INTERNAL
-  #------------------------
-
-  aws_route53_private ={
-    name             = "itwonderlab.local"
-    comment          = "ditwl-Private DNS"
-    tags_environment = "PRO"
-  }
-
-  #------------------------
   # PUBLIC - PRO
   #------------------------
 
@@ -116,12 +106,7 @@ aws_private_route_table_zb_name = "ditwl-rt-pri-zb"
   aws_route53_public = {
     name          = "demo.itwonderlab.com"
     comment       = "ditwl - Public DNS"
-    tags_environment   = "PRO"
-    dk1         = "aaa._domainkey.itwonderlab.com,CNAME,aaa.dkim.amazonses.com"
-    dk2         = "bbb._domainkey.itwonderlab.com,CNAME,bbb.dkim.amazonses.com"
-    dk3         = "ccc._domainkey.itwonderlab.com,CNAME,ccc.dkim.amazonses.com"
-    txt1         = "_amazonses,TXT,/aaa="
-    mx          = "1 ASPMX.L.GOOGLE.COM."
+    tags_environment   = "pro"
   }
 
 

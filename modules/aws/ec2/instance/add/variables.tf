@@ -164,3 +164,9 @@ variable "route53_public_zone_id" {
   description = "(Optional) Register in private DNS using tag_public_name"
   default = ""
 }
+
+variable "ignore_changes" {
+  description = "(Optional) A list of properties for ignore_changes in lifecycle"
+  type        = "list"
+  default     = []
+}

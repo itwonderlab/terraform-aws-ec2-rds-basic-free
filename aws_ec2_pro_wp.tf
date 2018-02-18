@@ -47,7 +47,7 @@
   module "aws_ec2_pro_wp" {
     source            = "./modules/aws/ec2/instance/add"
     name              = "${var.aws_ec2_pro_wp["name"]}"
-    ami               = "ami-66506c1c" #${data.aws_ami.ubuntu1604.id}"
+    ami               = "${data.aws_ami.ubuntu1604.id}"
     instance_type     = "${var.aws_ec2_pro_wp["instance_type"]}"
     availability_zone = "${var.aws_ec2_pro_wp["availability_zone"]}"
     key_name          = "${var.aws_ec2_pro_wp["key_name"]}"
@@ -79,4 +79,7 @@
     volume_tags       = {
       Name = "${var.aws_ec2_pro_wp["name"]}"
     }
+
+    ignore_changes = ["ami"]
+
   }

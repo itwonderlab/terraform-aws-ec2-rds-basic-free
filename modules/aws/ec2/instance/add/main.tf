@@ -75,6 +75,11 @@ resource "aws_instance" "default" {
     map("os"          , var.tag_os),
     map("cost_center" , var.tag_cost_center)
     )}"
+
+    lifecycle {
+        ignore_changes = ["ami"]
+    }
+
 }
 
 resource "aws_route53_record" "private" {
