@@ -118,7 +118,7 @@ aws_private_route_table_zb_name = "ditwl-rt-pri-zb"
   # Default EC2
   #------------------------
   aws_sec_group_ec2_default = {
-    sec_name        = "ditwl-aws-sg-ec2-def"
+    sec_name        = "ditwl-sg-ec2-def"
     sec_description = "ditwl - Default Security Group - Env: PRO"
     allow_all_outbound = true
   }
@@ -137,15 +137,15 @@ aws_private_route_table_zb_name = "ditwl-rt-pri-zb"
     #------------------------
     # Default RDS
     #------------------------
-    aws_sec_group_rds_mariadb_default = {
-      sec_name        = "ditwl-aws-sg-rds-mariadb-def"
+    aws_sg_rds_mariadb_default = {
+      sec_name        = "ditwl-sg-rds-mariadb-def"
       sec_description = "ditwl - Default Security Group RDS MariaDB"
       allow_all_outbound = true
     }
       #------------------------
       # Allow access from my Internet IP to DB port
       #------------------------
-      aws_sec_rule_rds_mariadb_default_internet_to_db_port = {
+      aws_sr_rds_mariadb_default_internet_to_db_port = {
         type              = "ingress"
         from_port         = "3306"
         to_port           = "3306"
@@ -163,11 +163,11 @@ aws_private_route_table_zb_name = "ditwl-rt-pri-zb"
   #------------------------
   # MariaDB PRO 01
   #------------------------
-  aws_rds_pro_mariadb_01 = {
-    identifier              = "ditwl-aws-rds-mariadb-pro-01"
+  aws_rds_mariadb_pro_pub_01 = {
+    identifier              = "ditwl-rds-mariadb-pro-pub-01"
     allocated_storage       = 20 #GB
     storage_type            = "gp2"
-    final_snapshot_id       = "ditwl-aws-rds-mariadb-pro-01-final"
+    final_snapshot_id       = "ditwl-rds-mariadb-pro-pub-01-final"
     skip_final_snapshot     = false
     engine                  = "mariadb"
     engine_version          = "10.2.11"
@@ -182,27 +182,27 @@ aws_private_route_table_zb_name = "ditwl-rt-pri-zb"
     parameter_group_name    = ""
     allow_major_version_up  = ""
     publicly_accessible     = true
-    tag_private_name        = "ditwl-aws-rds-mariadb-pro-01"
-    tag_public_name         = "ditwl-aws-rds-mariadb-pro-01"
+    tag_private_name        = "ditwl-rds-mariadb-pro-pub-01"
+    tag_public_name         = "ditwl-rds-mariadb-pro-pub-01"
     tag_app                 = "mariadb"
     tag_app_id              = "mariadb-01"
     tag_os                  = "rds"
     tags_environment        = "pro"
-    tag_cost_center         = "ditwl_permanent"
+    tag_cost_center         = "ditwl-permanent"
   }
 
   #------------------------
   # RDS Security Group
   #------------------------
-  aws_sec_group_rds_pro_mariadb_01 = {
-    sec_name        = "ditwl-aws-sg-rds-pro-mariadb-01"
-    sec_description = "ditwl - MariaDb server access rules - Env: PRO"
+  aws_sg_rds_mariadb_pro_pub_01 = {
+    sec_name        = "ditwl-aws-sg-rds-mariadb-pro-pub-01"
+    sec_description = "ditwl - MariaDb server access rules - Pub, Env: PRO"
     allow_all_outbound = false
   }
     #------------------------
     # Allow access from my Internet IP to DB port
     #------------------------
-    aws_sec_rule_rds_pro_mariadb_01_instances_to_db_port = {
+    aws_sr_rds_mariadb_pro_pub_01_instances_to_db_port = {
       type              = "ingress"
       from_port         = "3306"
       to_port           = "3306"
@@ -220,8 +220,8 @@ aws_private_route_table_zb_name = "ditwl-rt-pri-zb"
     # WP PRO
     #------------------------
 
-  aws_ec2_pro_wp = {
-    name              = "ditwl-aws-ec2-pro-wp"
+  aws_ec2_pro_pub_wp_01 = {
+    name              = "ditwl-ec2-pro-pub-wp01"
     ami               = ""
     instance_type     = "t2.micro" //AWS Free Tier: 750 hours per month of Linux, RHEL, or SLES t2.micro instance usage
     availability_zone = "us-east-1a"
@@ -231,23 +231,31 @@ aws_private_route_table_zb_name = "ditwl-rt-pri-zb"
     associate_public_ip_address = true
 
     root_block_device_size        = 8
+
     # See https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html
     root_block_device_volume_type = "gp2"
 
-    tag_private_name  = "ditwl-aws-ec2-pro-wp"
+    tag_private_name  = "ditwl-ec2-pro-pub-wp-01"
     tag_public_name   = "www"
     tag_app           = "wp"
     tag_app_id        = "wp-01"
     tag_os            = "ubuntu16"
     tags_environment  = "pro"
-    tag_cost_center   = "ditwl_permanent"
-    tags_volume       = ""
-    sec_name          = "ditwl-aws-sg-pro-wp"
-    sec_description   = "ditwl - WP server access rules - Env: PRO"
+    tag_cost_center   = "ditwl-permanent"
+    tags_volume       = "ditwl-ec2-pro-pub-wp-01-root"
 
   }
 
-  aws_sec_rule_ec2_pro_wp_internet_to_80 = {
+  #------------------------
+  # WP PRO Security Group
+  #------------------------
+  aws_sg_ec2_pro_pub_wp_01 = {
+    sec_name        = "ditwl-aws-sg-rds-mariadb-pro-pub-01"
+    sec_description = "ditwl - MariaDb server access rules - Pub, Env: PRO"
+    allow_all_outbound = false
+  }
+
+  aws_sre_ec2_pro_pub_wp_01_internet_to_80 = {
     type              = "ingress"
     from_port         = 80
     to_port           = 80
@@ -256,7 +264,7 @@ aws_private_route_table_zb_name = "ditwl-rt-pri-zb"
     description       = "Access from Internet to port 80"
   }
 
-  aws_sec_rule_ec2_pro_wp_internet_to_443 = {
+  aws_sre_ec2_pro_pub_wp_01_internet_to_443 = {
     type              = "ingress"
     from_port         = 443
     to_port           = 443

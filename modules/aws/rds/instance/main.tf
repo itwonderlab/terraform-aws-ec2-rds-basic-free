@@ -12,7 +12,7 @@ resource "aws_db_instance" "default" {
   identifier                = "${var.identifier}"
   allocated_storage         = "${var.allocated_storage}"
   storage_type              = "${var.storage_type}"
-  final_snapshot_identifier = "${var.final_snapshot_id}"
+  final_snapshot_identifier = "${format("%s-%s", var.final_snapshot_id, uuid())}"
   skip_final_snapshot       = "${var.skip_final_snapshot}"
   copy_tags_to_snapshot     = "${var.copy_tags_to_snapshot}"
   engine                    = "${var.engine}"
@@ -44,5 +44,10 @@ resource "aws_db_instance" "default" {
     map("os"          , var.tag_os),
     map("cost_center" , var.tag_cost_center)
     )}"
+
+  lifecycle {
+      ignore_changes = ["final_snapshot_identifier"]
+  }
+
 
 }

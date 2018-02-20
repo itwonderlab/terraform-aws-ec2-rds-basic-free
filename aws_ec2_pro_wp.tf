@@ -9,60 +9,60 @@
 
 # SECURITY
   # Group
-  module "aws_sec_group_ec2_pro_wp" {
+  module "aws_sg_ec2_pro_pub_wp_01" {
     source      = "./modules/aws/security/group"
     vpc_id      = "${module.aws_network_vpc.id}"
-    name        = "${var.aws_ec2_pro_wp["sec_name"]}"
-    description = "${var.aws_ec2_pro_wp["sec_description"]}"
+    name        = "${var.aws_sg_ec2_pro_pub_wp_01["sec_name"]}"
+    description = "${var.aws_sg_ec2_pro_pub_wp_01["sec_description"]}"
   }
 
   # Rules
 
   # Access from Internet to port 80 (for redirection)
-  module "aws_sec_rule_ec2_pro_wp_internet_to_80" {
+  module "aws_sre_ec2_pro_pub_wp_01_internet_to_80" {
     source            = "./modules/aws/security/rule/cidr_blocks"
-    security_group_id = "${module.aws_sec_group_ec2_pro_wp.id}"
-    type              = "${var.aws_sec_rule_ec2_pro_wp_internet_to_80["type"]}"
-    from_port         = "${var.aws_sec_rule_ec2_pro_wp_internet_to_80["from_port"]}"
-    to_port           = "${var.aws_sec_rule_ec2_pro_wp_internet_to_80["to_port"]}"
-    protocol          = "${var.aws_sec_rule_ec2_pro_wp_internet_to_80["protocol"]}"
-    cidr_blocks       = "${var.aws_sec_rule_ec2_pro_wp_internet_to_80["cidr_blocks"]}"
-    description       = "${var.aws_sec_rule_ec2_pro_wp_internet_to_80["description"]}"
+    security_group_id = "${module.aws_sg_ec2_pro_pub_wp_01.id}"
+    type              = "${var.aws_sre_ec2_pro_pub_wp_01_internet_to_80["type"]}"
+    from_port         = "${var.aws_sre_ec2_pro_pub_wp_01_internet_to_80["from_port"]}"
+    to_port           = "${var.aws_sre_ec2_pro_pub_wp_01_internet_to_80["to_port"]}"
+    protocol          = "${var.aws_sre_ec2_pro_pub_wp_01_internet_to_80["protocol"]}"
+    cidr_blocks       = "${var.aws_sre_ec2_pro_pub_wp_01_internet_to_80["cidr_blocks"]}"
+    description       = "${var.aws_sre_ec2_pro_pub_wp_01_internet_to_80["description"]}"
   }
 
   # Access from Internet to port 443
-  module "aws_sec_rule_ec2_pro_wp_internet_to_443" {
+  module "aws_sre_ec2_pro_pub_wp_01_internet_to_443" {
     source            = "./modules/aws/security/rule/cidr_blocks"
-    security_group_id = "${module.aws_sec_group_ec2_pro_wp.id}"
-    type              = "${var.aws_sec_rule_ec2_pro_wp_internet_to_443["type"]}"
-    from_port         = "${var.aws_sec_rule_ec2_pro_wp_internet_to_443["from_port"]}"
-    to_port           = "${var.aws_sec_rule_ec2_pro_wp_internet_to_443["to_port"]}"
-    protocol          = "${var.aws_sec_rule_ec2_pro_wp_internet_to_443["protocol"]}"
-    cidr_blocks       = "${var.aws_sec_rule_ec2_pro_wp_internet_to_443["cidr_blocks"]}"
-    description       = "${var.aws_sec_rule_ec2_pro_wp_internet_to_443["description"]}"
+    security_group_id = "${module.aws_sg_ec2_pro_pub_wp_01.id}"
+    type              = "${var.aws_sre_ec2_pro_pub_wp_01_internet_to_443["type"]}"
+    from_port         = "${var.aws_sre_ec2_pro_pub_wp_01_internet_to_443["from_port"]}"
+    to_port           = "${var.aws_sre_ec2_pro_pub_wp_01_internet_to_443["to_port"]}"
+    protocol          = "${var.aws_sre_ec2_pro_pub_wp_01_internet_to_443["protocol"]}"
+    cidr_blocks       = "${var.aws_sre_ec2_pro_pub_wp_01_internet_to_443["cidr_blocks"]}"
+    description       = "${var.aws_sre_ec2_pro_pub_wp_01_internet_to_443["description"]}"
   }
 
 
   # Create WP instance
-  module "aws_ec2_pro_wp" {
+  module "aws_ec2_pro_pub_wp_01" {
     source            = "./modules/aws/ec2/instance/add"
-    name              = "${var.aws_ec2_pro_wp["name"]}"
+    name              = "${var.aws_ec2_pro_pub_wp_01["name"]}"
     ami               = "${data.aws_ami.ubuntu1604.id}"
-    instance_type     = "${var.aws_ec2_pro_wp["instance_type"]}"
-    availability_zone = "${var.aws_ec2_pro_wp["availability_zone"]}"
-    key_name          = "${var.aws_ec2_pro_wp["key_name"]}"
+    instance_type     = "${var.aws_ec2_pro_pub_wp_01["instance_type"]}"
+    availability_zone = "${var.aws_ec2_pro_pub_wp_01["availability_zone"]}"
+    key_name          = "${var.aws_ec2_pro_pub_wp_01["key_name"]}"
     disable_api_termination = "${var.is_production ? true : false}"
-    vpc_security_group_ids = ["${module.aws_sec_group_ec2_default.id}","${module.aws_sec_group_ec2_pro_wp.id}"]
+    vpc_security_group_ids = ["${module.aws_sec_group_ec2_default.id}","${module.aws_sg_ec2_pro_pub_wp_01.id}"]
     subnet_id         = "${module.aws_sn_za_pro_pub_32.id}"
-    associate_public_ip_address = "${var.aws_ec2_pro_wp["associate_public_ip_address"]}"
+    associate_public_ip_address = "${var.aws_ec2_pro_pub_wp_01["associate_public_ip_address"]}"
     instance_tags     = {}
-    tag_private_name  = "${var.aws_ec2_pro_wp["tag_private_name"]}"
-    tag_public_name   = "${var.aws_ec2_pro_wp["tag_public_name"]}"
-    tag_app           = "${var.aws_ec2_pro_wp["tag_app"]}"
-    tag_app_id        = "${var.aws_ec2_pro_wp["tag_app_id"]}"
-    tag_os            = "${var.aws_ec2_pro_wp["tag_os"]}"
-    tags_environment  = "${var.aws_ec2_pro_wp["tags_environment"]}"
-    tag_cost_center   = "${var.aws_ec2_pro_wp["tag_cost_center"]}"
+    tag_private_name  = "${var.aws_ec2_pro_pub_wp_01["tag_private_name"]}"
+    tag_public_name   = "${var.aws_ec2_pro_pub_wp_01["tag_public_name"]}"
+    tag_app           = "${var.aws_ec2_pro_pub_wp_01["tag_app"]}"
+    tag_app_id        = "${var.aws_ec2_pro_pub_wp_01["tag_app_id"]}"
+    tag_os            = "${var.aws_ec2_pro_pub_wp_01["tag_os"]}"
+    tags_environment  = "${var.aws_ec2_pro_pub_wp_01["tags_environment"]}"
+    tag_cost_center   = "${var.aws_ec2_pro_pub_wp_01["tag_cost_center"]}"
 
     register_dns_private = true
     route53_private_zone_id = "${module.aws_route53_public.id}"
@@ -71,13 +71,13 @@
     route53_public_zone_id = "${module.aws_route53_public.id}"
 
     root_block_device = {
-      volume_size           = "${var.aws_ec2_pro_wp["root_block_device_size"]}"
-      volume_type           = "${var.aws_ec2_pro_wp["root_block_device_volume_type"]}"
+      volume_size           = "${var.aws_ec2_pro_pub_wp_01["root_block_device_size"]}"
+      volume_type           = "${var.aws_ec2_pro_pub_wp_01["root_block_device_volume_type"]}"
       delete_on_termination = "${var.is_production ? false : true}" #If production, Do not delete!
     }
 
     volume_tags       = {
-      Name = "${var.aws_ec2_pro_wp["name"]}"
+      Name = "${var.aws_ec2_pro_pub_wp_01["name"]}"
     }
 
     ignore_changes = ["ami"]
