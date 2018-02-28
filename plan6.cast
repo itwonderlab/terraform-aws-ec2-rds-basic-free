@@ -1,0 +1,1810 @@
+{
+  "stdout": [
+    [
+      0.036599,
+      "\u001b]0;jruiz@CNU2023FP3: ~/git/github/terraform-aws-ec2-rds-basic-free\u0007jruiz:terraform-aws-ec2-rds-basic-free$ "
+    ],
+    [
+      1.346552,
+      "t"
+    ],
+    [
+      0.136838,
+      "e"
+    ],
+    [
+      0.215498,
+      "r"
+    ],
+    [
+      0.159628,
+      "r"
+    ],
+    [
+      0.240095,
+      "a"
+    ],
+    [
+      0.151784,
+      "f"
+    ],
+    [
+      0.16021,
+      "o"
+    ],
+    [
+      0.040339,
+      "r"
+    ],
+    [
+      0.559874,
+      "m"
+    ],
+    [
+      0.184343,
+      " "
+    ],
+    [
+      0.359135,
+      "g"
+    ],
+    [
+      0.088186,
+      "e"
+    ],
+    [
+      0.071986,
+      "t"
+    ],
+    [
+      0.161642,
+      " "
+    ],
+    [
+      0.238742,
+      "&"
+    ],
+    [
+      0.127976,
+      "&"
+    ],
+    [
+      0.1759,
+      " "
+    ],
+    [
+      0.128177,
+      "t"
+    ],
+    [
+      0.087856,
+      "e"
+    ],
+    [
+      0.183785,
+      "r"
+    ],
+    [
+      0.144209,
+      "r"
+    ],
+    [
+      0.253761,
+      "aform "
+    ],
+    [
+      0.473958,
+      "p"
+    ],
+    [
+      0.179092,
+      "l"
+    ],
+    [
+      0.115752,
+      "a"
+    ],
+    [
+      0.081629,
+      "n"
+    ],
+    [
+      0.239974,
+      "\r\n"
+    ],
+    [
+      0.056876,
+      "- module.aws_sg_ec2_pro_pub_wp_01\r\n"
+    ],
+    [
+      0.00194,
+      "- module.aws_sr_ec2_pro_pub_wp_01_internet_to_80\r\n"
+    ],
+    [
+      0.001975,
+      "- module.aws_sr_ec2_pro_pub_wp_01_internet_to_443\r\n"
+    ],
+    [
+      0.00198,
+      "- module.aws_ec2_pro_pub_wp_01\r\n"
+    ],
+    [
+      0.004306,
+      "- module.aws_internet_gw\r\n"
+    ],
+    [
+      0.001329,
+      "- module.aws_sg_rds_mariadb_pro_pub_01\r\n"
+    ],
+    [
+      0.001601,
+      "- module.aws_sr_rds_mariadb_pro_pub_01_instances_to_db_port\r\n"
+    ],
+    [
+      0.001421,
+      "- module.aws_rds_mariadb_pro_pub_01\r\n"
+    ],
+    [
+      0.004865,
+      "- module.aws_rds_sn_pub_pro_01\r\n"
+    ],
+    [
+      0.001456,
+      "- module.aws_route53_delegation_set\r\n"
+    ],
+    [
+      0.001191,
+      "- module.aws_route53_public\r\n"
+    ],
+    [
+      0.001342,
+      "- module.aws_sg_ec2_default\r\n"
+    ],
+    [
+      0.001617,
+      "- module.aws_sr_ec2_default_internet_to_ssh\r\n"
+    ],
+    [
+      0.001538,
+      "- module.aws_sg_rds_mariadb_default\r\n"
+    ],
+    [
+      0.00142,
+      "- module.aws_sr_rds_mariadb_default_internet_to_db_port\r\n"
+    ],
+    [
+      0.001346,
+      "- module.aws_network_vpc\r\n"
+    ],
+    [
+      0.001243,
+      "- module.aws_main_route_table_public\r\n"
+    ],
+    [
+      0.001173,
+      "- module.aws_internet_route\r\n"
+    ],
+    [
+      0.002214,
+      "- module.aws_private_route_table_za\r\n"
+    ],
+    [
+      0.001186,
+      "- module.aws_private_route_table_zb\r\n"
+    ],
+    [
+      0.00179,
+      "- module.aws_sn_za_pro_pub_32\r\n"
+    ],
+    [
+      0.001472,
+      "- module.aws_sn_za_pro_pri_34\r\n"
+    ],
+    [
+      0.002908,
+      "- module.aws_sn_zb_pro_pub_36\r\n"
+    ],
+    [
+      0.00119,
+      "- module.aws_sn_zb_pro_pri_38\r\n"
+    ],
+    [
+      0.946264,
+      "\u001b[0m\u001b[1mRefreshing Terraform state in-memory prior to plan...\u001b[0m\r\nThe refreshed state will be used to calculate this plan, but will not be\r\npersisted to local or remote state storage.\r\n\u001b[0m\r\n"
+    ],
+    [
+      0.027417,
+      "\u001b[0m\u001b[1mdata.external.whatismyip: Refreshing state...\u001b[0m"
+    ],
+    [
+      7.4e-05,
+      "\r\n"
+    ],
+    [
+      2.610852,
+      "\u001b[0m\u001b[1mdata.aws_ami.ubuntu1604: Refreshing state...\u001b[0m\r\n"
+    ],
+    [
+      5.59466,
+      "\r\n"
+    ],
+    [
+      0.000661,
+      "------------------------------------------------------------------------\r\n"
+    ],
+    [
+      2.464936,
+      "\r\n"
+    ],
+    [
+      7.4e-05,
+      "An execution plan has been generated and is shown below.\r\n"
+    ],
+    [
+      9.4e-05,
+      "Resource actions are indicated with the following symbols:\r\n"
+    ],
+    [
+      5.3e-05,
+      "  \u001b[32m+\u001b[0m create\r\n\u001b[0m\r\n"
+    ],
+    [
+      0.000158,
+      "Terraform will perform the following actions:"
+    ],
+    [
+      6.2e-05,
+      "\r\n"
+    ],
+    [
+      0.000198,
+      "\r\n"
+    ],
+    [
+      0.000965,
+      "\u001b[32m  \u001b[32m+\u001b[0m \u001b[32maws_main_route_table_association.default\r\n"
+    ],
+    [
+      0.000226,
+      "\u001b[0m      id:                                        <computed>\r\n"
+    ],
+    [
+      0.000164,
+      "      original_route_table_id:                   <computed>\r\n"
+    ],
+    [
+      0.000352,
+      "      route_table_id:                            \"${module.aws_main_route_table_public.id}\"\r\n"
+    ],
+    [
+      0.000265,
+      "      vpc_id:                                    \"${module.aws_network_vpc.id}\"\r\n"
+    ],
+    [
+      4.9e-05,
+      "\u001b[0m\r\n"
+    ],
+    [
+      0.000324,
+      "\u001b[0m\u001b[32m  \u001b[32m+\u001b[0m \u001b[32maws_route_table_association.aws_sn_zb_pro_pri_38\r\n"
+    ],
+    [
+      0.000175,
+      "\u001b[0m      id:                                        <computed>\r\n"
+    ],
+    [
+      0.000382,
+      "      route_table_id:                            \"${module.aws_private_route_table_zb.id}\"\r\n"
+    ],
+    [
+      0.000291,
+      "      subnet_id:                                 \"${module.aws_sn_zb_pro_pri_38.id}\"\r\n"
+    ],
+    [
+      0.000177,
+      "\u001b[0m\r\n"
+    ],
+    [
+      0.00016,
+      "\u001b[0m\u001b[32m  \u001b[32m+\u001b[0m \u001b[32maws_route_table_association.route_sn_za_pro_pri_34\r\n"
+    ],
+    [
+      0.000256,
+      "\u001b[0m      id:                                        <computed>\r\n"
+    ],
+    [
+      0.000278,
+      "      route_table_id:                            \"${module.aws_private_route_table_za.id}\"\r\n"
+    ],
+    [
+      0.000271,
+      "      subnet_id:                                 \"${module.aws_sn_za_pro_pri_34.id}\"\r\n"
+    ],
+    [
+      0.004585,
+      "\u001b[0m\r\n"
+    ],
+    [
+      0.00088,
+      "\u001b[0m\u001b[32m  \u001b[32m+\u001b[0m \u001b[32mmodule.aws_ec2_pro_pub_wp_01.aws_instance.default\r\n"
+    ],
+    [
+      0.000458,
+      "\u001b[0m      id:                                        <computed>\r\n"
+    ],
+    [
+      0.000437,
+      "      ami:                                       \"ami-ee4eac93\"\r\n"
+    ],
+    [
+      0.000402,
+      "      associate_public_ip_address:               \"true\"\r\n"
+    ],
+    [
+      0.000434,
+      "      availability_zone:                         \"us-east-1a\""
+    ],
+    [
+      0.000165,
+      "\r\n"
+    ],
+    [
+      0.000447,
+      "      disable_api_termination:                   \"false\"\r\n"
+    ],
+    [
+      0.00066,
+      "      ebs_optimized:                             \"false\"\r\n      instance_initiated_shutdown_behavior:      \"stop\"\r\n      instance_state:                            <computed>\r\n      instance_type:                             \"t2.micro\"\r\n"
+    ],
+    [
+      0.000194,
+      "      ipv6_address_count:                        <computed>\r\n"
+    ],
+    [
+      7.7e-05,
+      "      ipv6_addresses.#:                          <computed>"
+    ],
+    [
+      8.9e-05,
+      "\r\n"
+    ],
+    [
+      0.000283,
+      "      key_name:                                  \"ditwl_kp_infradmin\"\r\n"
+    ],
+    [
+      0.000259,
+      "      monitoring:                                \"false\"\r\n"
+    ],
+    [
+      3.5e-05,
+      "      network_interface.#:                       <computed>\r\n"
+    ],
+    [
+      0.000189,
+      "      network_interface_id:                      <computed>\r\n"
+    ],
+    [
+      0.000191,
+      "      placement_group:                           <computed>\r\n"
+    ],
+    [
+      0.000217,
+      "      primary_network_interface_id:              <computed>\r\n"
+    ],
+    [
+      0.000162,
+      "      private_dns:                               <computed>\r\n"
+    ],
+    [
+      0.00015,
+      "      private_ip:                                <computed>\r\n"
+    ],
+    [
+      0.00017,
+      "      public_dns:                                <computed>\r\n"
+    ],
+    [
+      0.000337,
+      "      public_ip:                                 <computed>\r\n"
+    ],
+    [
+      5.1e-05,
+      "      root_block_device.#:                       \"1\"\r\n"
+    ],
+    [
+      0.00027,
+      "      root_block_device.0.delete_on_termination: \"true\"\r\n"
+    ],
+    [
+      4e-05,
+      "      root_block_device.0.volume_id:             <computed>\r\n"
+    ],
+    [
+      0.000249,
+      "      root_block_device.0.volume_size:           \"8\"\r\n"
+    ],
+    [
+      0.00018,
+      "      root_block_device.0.volume_type:           \"gp2\"\r\n"
+    ],
+    [
+      0.000196,
+      "      security_groups.#:                         <computed>\r\n"
+    ],
+    [
+      0.000165,
+      "      source_dest_check:                         \"true\"\r\n"
+    ],
+    [
+      0.000153,
+      "      subnet_id:                                 \"${var.subnet_id}\"\r\n"
+    ],
+    [
+      5.8e-05,
+      "      tags.%:                                    \"8\"\r\n"
+    ],
+    [
+      0.000266,
+      "      tags.Name:                                 \"ditwl-ec2-pro-pub-wp01-1\"\r\n"
+    ],
+    [
+      0.000158,
+      "      tags.app:                                  \"wp\"\r\n"
+    ],
+    [
+      0.000188,
+      "      tags.app_id:                               \"wp-01\"\r\n"
+    ],
+    [
+      0.000142,
+      "      tags.cost_center:                          \"ditwl-permanent\"\r\n"
+    ],
+    [
+      0.000139,
+      "      tags.environment:                          \"pro\"\r\n"
+    ],
+    [
+      9.2e-05,
+      "      tags.os:                                   \"ubuntu16\"\r\n"
+    ],
+    [
+      0.000146,
+      "      tags.private_name:                         \"ditwl-ec2-pro-pub-wp-01\"\r\n"
+    ],
+    [
+      0.000139,
+      "      tags.public_name:                          \"www\"\r\n"
+    ],
+    [
+      0.000121,
+      "      tenancy:                                   <computed>\r\n"
+    ],
+    [
+      0.000161,
+      "      user_data:                                 \"da39a3ee5e6b4b0d3255bfef95601890afd80709\"\r\n"
+    ],
+    [
+      0.000105,
+      "      volume_tags.%:                             \"1\"\r\n"
+    ],
+    [
+      0.000144,
+      "      volume_tags.Name:                          \"ditwl-ec2-pro-pub-wp01\"\r\n"
+    ],
+    [
+      0.000118,
+      "      vpc_security_group_ids.#:                  <computed>\r\n"
+    ],
+    [
+      2.4e-05,
+      "\u001b[0m\r\n"
+    ],
+    [
+      0.000169,
+      "\u001b[0m\u001b[32m  \u001b[32m+\u001b[0m \u001b[32mmodule.aws_ec2_pro_pub_wp_01.aws_route53_record.private\r\n"
+    ],
+    [
+      0.000136,
+      "\u001b[0m      id:                                        <computed>\r\n"
+    ],
+    [
+      0.000151,
+      "      fqdn:                                      <computed>\r\n"
+    ],
+    [
+      0.000145,
+      "      name:                                      \"ditwl-ec2-pro-pub-wp-01\"\r\n"
+    ],
+    [
+      0.000116,
+      "      records.#:                                 <computed>\r\n"
+    ],
+    [
+      0.000138,
+      "      ttl:                                       \"300\"\r\n"
+    ],
+    [
+      0.000112,
+      "      type:                                      \"A\"\r\n"
+    ],
+    [
+      0.00016,
+      "      zone_id:                                   \"${var.route53_private_zone_id}\"\r\n\u001b[0m\r\n"
+    ],
+    [
+      0.000154,
+      "\u001b[0m\u001b[32m  \u001b[32m+\u001b[0m \u001b[32mmodule.aws_ec2_pro_pub_wp_01.aws_route53_record.public\r\n"
+    ],
+    [
+      0.000138,
+      "\u001b[0m      id:                                        <computed>\r\n"
+    ],
+    [
+      0.00013,
+      "      fqdn:                                      <computed>\r\n"
+    ],
+    [
+      0.000355,
+      "      name:                                      \"www\"\r\n      records.#:                                 <computed>\r\n      ttl:                                       \"300\"\r\n      type:                                      \"A\"\r\n"
+    ],
+    [
+      0.000121,
+      "      zone_id:                                   \"${var.route53_public_zone_id}\"\r\n"
+    ],
+    [
+      2.3e-05,
+      "\u001b[0m\r\n"
+    ],
+    [
+      0.000189,
+      "\u001b[0m\u001b[32m  \u001b[32m+\u001b[0m \u001b[32mmodule.aws_internet_gw.aws_internet_gateway.default\r\n"
+    ],
+    [
+      0.000144,
+      "\u001b[0m      id:                                        <computed>\r\n"
+    ],
+    [
+      0.000188,
+      "      tags.%:                                    \"1\"\r\n"
+    ],
+    [
+      0.00015,
+      "      tags.Name:                                 \"ditwl-igw-pub\"\r\n"
+    ],
+    [
+      0.000156,
+      "      vpc_id:                                    \"${var.vpc_id}\"\r\n\u001b[0m\r\n"
+    ],
+    [
+      0.00017,
+      "\u001b[0m\u001b[32m  \u001b[32m+\u001b[0m \u001b[32mmodule.aws_internet_route.aws_route.default\r\n"
+    ],
+    [
+      0.00014,
+      "\u001b[0m      id:                                        <computed>\r\n"
+    ],
+    [
+      0.000115,
+      "      destination_cidr_block:                    \"0.0.0.0/0\"\r\n"
+    ],
+    [
+      0.000142,
+      "      destination_prefix_list_id:                <computed>\r\n"
+    ],
+    [
+      0.00013,
+      "      egress_only_gateway_id:                    <computed>\r\n"
+    ],
+    [
+      0.000153,
+      "      gateway_id:                                \"${var.gateway_id}\"\r\n"
+    ],
+    [
+      0.000175,
+      "      instance_id:                               <computed>\r\n"
+    ],
+    [
+      0.000129,
+      "      instance_owner_id:                         <computed>\r\n"
+    ],
+    [
+      0.000143,
+      "      nat_gateway_id:                            <computed>\r\n"
+    ],
+    [
+      0.000141,
+      "      network_interface_id:                      <computed>\r\n"
+    ],
+    [
+      0.00016,
+      "      origin:                                    <computed>\r\n"
+    ],
+    [
+      0.000144,
+      "      route_table_id:                            \"${var.route_table_id}\"\r\n"
+    ],
+    [
+      0.000128,
+      "      state:                                     <computed>\r\n\u001b[0m\r\n"
+    ],
+    [
+      0.000119,
+      "\u001b[0m\u001b[32m  \u001b[32m+\u001b[0m \u001b[32mmodule.aws_main_route_table_public.aws_route_table.default\r\n"
+    ],
+    [
+      0.000113,
+      "\u001b[0m      id:                                        <computed>\r\n"
+    ],
+    [
+      0.000121,
+      "      route.#:                                   <computed>\r\n"
+    ],
+    [
+      3.3e-05,
+      "      tags.%:                                    \"1\"\r\n"
+    ],
+    [
+      0.000194,
+      "      tags.Name:                                 \"ditwl-rt-pub-main\"\r\n"
+    ],
+    [
+      0.000159,
+      "      vpc_id:                                    \"${var.vpc_id}\"\r\n"
+    ],
+    [
+      3.7e-05,
+      "\u001b[0m\r\n"
+    ],
+    [
+      0.00016,
+      "\u001b[0m\u001b[32m  \u001b[32m+\u001b[0m \u001b[32mmodule.aws_network_vpc.aws_vpc.default\r\n"
+    ],
+    [
+      0.00016,
+      "\u001b[0m      id:                                        <computed>\r\n"
+    ],
+    [
+      0.000131,
+      "      assign_generated_ipv6_cidr_block:          \"false\"\r\n"
+    ],
+    [
+      0.000127,
+      "      cidr_block:                                \"172.17.32.0/19\"\r\n"
+    ],
+    [
+      0.00015,
+      "      default_network_acl_id:                    <computed>\r\n"
+    ],
+    [
+      0.000109,
+      "      default_route_table_id:                    <computed>\r\n"
+    ],
+    [
+      9.8e-05,
+      "      default_security_group_id:                 <computed>\r\n"
+    ],
+    [
+      9.4e-05,
+      "      dhcp_options_id:                           <computed>\r\n"
+    ],
+    [
+      0.000141,
+      "      enable_classiclink:                        <computed>\r\n"
+    ],
+    [
+      0.000112,
+      "      enable_classiclink_dns_support:            <computed>\r\n"
+    ],
+    [
+      0.000172,
+      "      enable_dns_hostnames:                      \"true\"\r\n"
+    ],
+    [
+      0.00011,
+      "      enable_dns_support:                        \"true\"\r\n"
+    ],
+    [
+      0.000178,
+      "      instance_tenancy:                          <computed>\r\n"
+    ],
+    [
+      0.000117,
+      "      ipv6_association_id:                       <computed>\r\n"
+    ],
+    [
+      0.000136,
+      "      ipv6_cidr_block:                           <computed>\r\n"
+    ],
+    [
+      0.000139,
+      "      main_route_table_id:                       <computed>\r\n"
+    ],
+    [
+      0.000132,
+      "      tags.%:                                    \"1\"\r\n"
+    ],
+    [
+      0.000133,
+      "      tags.Name:                                 \"ditwl-vpc\"\r\n"
+    ],
+    [
+      2.4e-05,
+      "\u001b[0m\r\n"
+    ],
+    [
+      0.000198,
+      "\u001b[0m\u001b[32m  \u001b[32m+\u001b[0m \u001b[32mmodule.aws_private_route_table_za.aws_route_table.default\r\n"
+    ],
+    [
+      0.000152,
+      "\u001b[0m      id:                                        <computed>\r\n"
+    ],
+    [
+      0.00015,
+      "      route.#:                                   <computed>\r\n"
+    ],
+    [
+      0.00012,
+      "      tags.%:                                    \"1\"\r\n"
+    ],
+    [
+      0.000374,
+      "      tags.Name:                                 \"ditwl-rt-pri-za\"\r\n"
+    ],
+    [
+      0.000149,
+      "      vpc_id:                                    \"${var.vpc_id}\"\r\n\u001b[0m\r\n"
+    ],
+    [
+      0.000185,
+      "\u001b[0m\u001b[32m  \u001b[32m+\u001b[0m \u001b[32mmodule.aws_private_route_table_zb.aws_route_table.default\r\n"
+    ],
+    [
+      0.000151,
+      "\u001b[0m      id:                                        <computed>\r\n"
+    ],
+    [
+      0.000152,
+      "      route.#:                                   <computed>\r\n"
+    ],
+    [
+      0.000117,
+      "      tags.%:                                    \"1\"\r\n"
+    ],
+    [
+      0.000153,
+      "      tags.Name:                                 \"ditwl-rt-pri-zb\"\r\n"
+    ],
+    [
+      0.000145,
+      "      vpc_id:                                    \"${var.vpc_id}\"\r\n"
+    ],
+    [
+      2.5e-05,
+      "\u001b[0m\r\n"
+    ],
+    [
+      0.00065,
+      "\u001b[0m\u001b[32m  \u001b[32m+\u001b[0m \u001b[32mmodule.aws_rds_mariadb_pro_pub_01.aws_db_instance.default\r\n\u001b[0m      id:                                        <computed>\r\n      address:                                   <computed>\r\n"
+    ],
+    [
+      0.000395,
+      "      allocated_storage:                         \"20\"\r\n      allow_major_version_upgrade:               \"false\"\r\n      apply_immediately:                         \"true\"\r\n      arn:                                       <computed>\r\n"
+    ],
+    [
+      0.000162,
+      "      auto_minor_version_upgrade:                \"true\"\r\n"
+    ],
+    [
+      2.5e-05,
+      "      availability_zone:                         \"us-east-1a\"\r\n"
+    ],
+    [
+      0.000115,
+      "      backup_retention_period:                   \"5\"\r\n"
+    ],
+    [
+      0.00014,
+      "      backup_window:                             <computed>\r\n"
+    ],
+    [
+      0.000125,
+      "      ca_cert_identifier:                        <computed>\r\n"
+    ],
+    [
+      0.00013,
+      "      character_set_name:                        <computed>\r\n"
+    ],
+    [
+      0.000207,
+      "      copy_tags_to_snapshot:                     \"false\"\r\n"
+    ],
+    [
+      0.000184,
+      "      db_subnet_group_name:                      \"${var.db_subnet_group_name}\"\r\n"
+    ],
+    [
+      0.000228,
+      "      endpoint:                                  <computed>\r\n"
+    ],
+    [
+      2.5e-05,
+      "      engine:                                    \"mariadb\"\r\n"
+    ],
+    [
+      0.000149,
+      "      engine_version:                            \"10.2.11\"\r\n"
+    ],
+    [
+      0.000283,
+      "      final_snapshot_identifier:                 \"ditwl-rds-mariadb-pro-pub-01-final-4900be68-65d3-f6a4-15d0-07fc6c0cd260\"\r\n"
+    ],
+    [
+      0.000131,
+      "      hosted_zone_id:                            <computed>\r\n"
+    ],
+    [
+      0.000183,
+      "      identifier:                                \"ditwl-rds-mariadb-pro-pub-01\"\r\n"
+    ],
+    [
+      0.000197,
+      "      identifier_prefix:                         <computed>\r\n"
+    ],
+    [
+      0.000173,
+      "      instance_class:                            \"db.t2.micro\"\r\n"
+    ],
+    [
+      0.00047,
+      "      kms_key_id:                                <computed>\r\n      license_model:                             <computed>\r\n      maintenance_window:                        <computed>\r\n"
+    ],
+    [
+      0.000931,
+      "      monitoring_interval:                       \"0\"\r\n"
+    ],
+    [
+      0.000603,
+      "      monitoring_role_arn:                       <computed>\r\n"
+    ],
+    [
+      0.000561,
+      "      multi_az:                                  \"false\"\r\n"
+    ],
+    [
+      0.000585,
+      "      name:                                      <computed>\r\n"
+    ],
+    [
+      0.00058,
+      "      option_group_name:                         <computed>\r\n"
+    ],
+    [
+      0.000523,
+      "      parameter_group_name:                      <computed>\r\n"
+    ],
+    [
+      0.000517,
+      "      password:                                  <sensitive>\r\n"
+    ],
+    [
+      0.00018,
+      "      port:                                      <computed>\r\n"
+    ],
+    [
+      5.4e-05,
+      "      publicly_accessible:                       \"true\"\r\n"
+    ],
+    [
+      0.000213,
+      "      replicas.#:                                <computed>\r\n"
+    ],
+    [
+      0.000174,
+      "      resource_id:                               <computed>\r\n"
+    ],
+    [
+      0.000169,
+      "      skip_final_snapshot:                       \"false\"\r\n"
+    ],
+    [
+      0.000179,
+      "      status:                                    <computed>\r\n"
+    ],
+    [
+      9.8e-05,
+      "      storage_encrypted:                         \"false\"\r\n"
+    ],
+    [
+      0.000103,
+      "      storage_type:                              \"gp2\"\r\n"
+    ],
+    [
+      0.000102,
+      "      tags.%:                                    \"8\"\r\n"
+    ],
+    [
+      0.00013,
+      "      tags.Name:                                 \"ditwl-rds-mariadb-pro-pub-01-1\"\r\n"
+    ],
+    [
+      0.000102,
+      "      tags.app:                                  \"mariadb\"\r\n"
+    ],
+    [
+      0.000122,
+      "      tags.app_id:                               \"mariadb-01\"\r\n"
+    ],
+    [
+      0.000162,
+      "      tags.cost_center:                          \"ditwl-permanent\"\r\n"
+    ],
+    [
+      0.000144,
+      "      tags.environment:                          \"pro\"\r\n"
+    ],
+    [
+      0.000108,
+      "      tags.os:                                   \"rds\"\r\n"
+    ],
+    [
+      0.000116,
+      "      tags.private_name:                         \"ditwl-rds-mariadb-pro-pub-01\"\r\n"
+    ],
+    [
+      0.000104,
+      "      tags.public_name:                          \"ditwl-rds-mariadb-pro-pub-01\"\r\n"
+    ],
+    [
+      9e-05,
+      "      timezone:                                  <computed>\r\n"
+    ],
+    [
+      0.000125,
+      "      username:                                  \"ditwlRDSPROdb01\"\r\n"
+    ],
+    [
+      0.000103,
+      "      vpc_security_group_ids.#:                  <computed>\r\n\u001b[0m\r\n"
+    ],
+    [
+      0.000125,
+      "\u001b[0m\u001b[32m  \u001b[32m+\u001b[0m \u001b[32mmodule.aws_rds_sn_pub_pro_01.aws_db_subnet_group.default\r\n"
+    ],
+    [
+      9.9e-05,
+      "\u001b[0m      id:                                        <computed>\r\n"
+    ],
+    [
+      9.9e-05,
+      "      arn:                                       <computed>\r\n"
+    ],
+    [
+      2.5e-05,
+      "      description:                               \"ditwl-RDS-SN-pub-PRO-01\"\r\n"
+    ],
+    [
+      9.7e-05,
+      "      name:                                      \"ditwl-rds-sn-pub-pro-01\"\r\n"
+    ],
+    [
+      9.9e-05,
+      "      name_prefix:                               <computed>\r\n"
+    ],
+    [
+      0.000106,
+      "      subnet_ids.#:                              <computed>\r\n      tags.%:                                    \"1\"\r\n"
+    ],
+    [
+      0.000151,
+      "      tags.Name:                                 \"ditwl-rds-sn-pub-pro-01\"\r\n\u001b[0m\r\n"
+    ],
+    [
+      0.000123,
+      "\u001b[0m\u001b[32m  \u001b[32m+\u001b[0m \u001b[32mmodule.aws_route53_delegation_set.aws_route53_delegation_set.public\r\n"
+    ],
+    [
+      9.9e-05,
+      "\u001b[0m      id:                                        <computed>\r\n"
+    ],
+    [
+      0.000103,
+      "      name_servers.#:                            <computed>\r\n"
+    ],
+    [
+      2.3e-05,
+      "      reference_name:                            \"ditwl-r53-del\"\r\n\u001b[0m\r\n"
+    ],
+    [
+      9.8e-05,
+      "\u001b[0m\u001b[32m  \u001b[32m+\u001b[0m \u001b[32mmodule.aws_route53_public.aws_route53_zone.public\r\n"
+    ],
+    [
+      0.000134,
+      "\u001b[0m      id:                                        <computed>\r\n"
+    ],
+    [
+      9.9e-05,
+      "      comment:                                   \"ditwl - Public DNS\"\r\n"
+    ],
+    [
+      6.2e-05,
+      "      delegation_set_id:                         \"${var.delegation_set_id}\"\r\n"
+    ],
+    [
+      7.3e-05,
+      "      force_destroy:                             \"false\"\r\n"
+    ],
+    [
+      8.6e-05,
+      "      name:                                      \"demo.itwonderlab.com\"\r\n"
+    ],
+    [
+      6.6e-05,
+      "      name_servers.#:                            <computed>\r\n"
+    ],
+    [
+      5.8e-05,
+      "      tags.%:                                    \"2\"\r\n"
+    ],
+    [
+      8e-05,
+      "      tags.Name:                                 \"demo.itwonderlab.com\"\r\n"
+    ],
+    [
+      7.9e-05,
+      "      tags.env:                                  \"pro\"\r\n"
+    ],
+    [
+      6.7e-05,
+      "      vpc_region:                                <computed>\r\n"
+    ],
+    [
+      6.8e-05,
+      "      zone_id:                                   <computed>\r\n"
+    ],
+    [
+      4.2e-05,
+      "\u001b[0m\r\n"
+    ],
+    [
+      9.7e-05,
+      "\u001b[0m\u001b[32m  \u001b[32m+\u001b[0m \u001b[32mmodule.aws_sg_ec2_default.aws_security_group.default\r\n"
+    ],
+    [
+      9.5e-05,
+      "\u001b[0m      id:                                        <computed>\r\n"
+    ],
+    [
+      9.4e-05,
+      "      description:                               \"ditwl - Default Security Group - Env: PRO\"\r\n"
+    ],
+    [
+      9.7e-05,
+      "      egress.#:                                  <computed>\r\n"
+    ],
+    [
+      2.4e-05,
+      "      ingress.#:                                 <computed>\r\n"
+    ],
+    [
+      9.4e-05,
+      "      name:                                      \"ditwl-sg-ec2-def\"\r\n"
+    ],
+    [
+      9.3e-05,
+      "      owner_id:                                  <computed>\r\n"
+    ],
+    [
+      9.5e-05,
+      "      revoke_rules_on_delete:                    \"false\"\r\n"
+    ],
+    [
+      2.2e-05,
+      "      tags.%:                                    \"1\"\r\n"
+    ],
+    [
+      9.4e-05,
+      "      tags.Name:                                 \"ditwl-sg-ec2-def\"\r\n"
+    ],
+    [
+      9.6e-05,
+      "      vpc_id:                                    \"${var.vpc_id}\"\r\n\u001b[0m\r\n"
+    ],
+    [
+      9.7e-05,
+      "\u001b[0m\u001b[32m  \u001b[32m+\u001b[0m \u001b[32mmodule.aws_sg_ec2_default.aws_security_group_rule.all_outbund\r\n"
+    ],
+    [
+      9.3e-05,
+      "\u001b[0m      id:                                        <computed>\r\n"
+    ],
+    [
+      9.4e-05,
+      "      cidr_blocks.#:                             \"1\"\r\n"
+    ],
+    [
+      2.3e-05,
+      "      cidr_blocks.0:                             \"0.0.0.0/0\"\r\n"
+    ],
+    [
+      0.000103,
+      "      description:                               \"Allow all outbound traffic\"\r\n"
+    ],
+    [
+      9.5e-05,
+      "      from_port:                                 \"0\"\r\n"
+    ],
+    [
+      9.6e-05,
+      "      protocol:                                  \"-1\"\r\n"
+    ],
+    [
+      9.5e-05,
+      "      security_group_id:                         \"${aws_security_group.default.id}\"\r\n"
+    ],
+    [
+      2.2e-05,
+      "      self:                                      \"false\"\r\n"
+    ],
+    [
+      9.6e-05,
+      "      source_security_group_id:                  <computed>\r\n"
+    ],
+    [
+      9.5e-05,
+      "      to_port:                                   \"0\"\r\n"
+    ],
+    [
+      2.6e-05,
+      "      type:                                      \"egress\"\r\n\u001b[0m\r\n"
+    ],
+    [
+      0.00012,
+      "\u001b[0m\u001b[32m  \u001b[32m+\u001b[0m \u001b[32mmodule.aws_sg_ec2_pro_pub_wp_01.aws_security_group.default\r\n"
+    ],
+    [
+      9.4e-05,
+      "\u001b[0m      id:                                        <computed>\r\n"
+    ],
+    [
+      0.000103,
+      "      description:                               \"ditwl - WP server access rules - Pub, Env: PRO\"\r\n"
+    ],
+    [
+      0.000101,
+      "      egress.#:                                  <computed>\r\n"
+    ],
+    [
+      9.6e-05,
+      "      ingress.#:                                 <computed>\r\n"
+    ],
+    [
+      0.000119,
+      "      name:                                      \"ditwl-sg-ec2-pro-pub-01\"\r\n"
+    ],
+    [
+      0.000162,
+      "      owner_id:                                  <computed>\r\n"
+    ],
+    [
+      9.5e-05,
+      "      revoke_rules_on_delete:                    \"false\"\r\n"
+    ],
+    [
+      9.4e-05,
+      "      tags.%:                                    \"1\"\r\n"
+    ],
+    [
+      9.6e-05,
+      "      tags.Name:                                 \"ditwl-sg-ec2-pro-pub-01\"\r\n"
+    ],
+    [
+      2.4e-05,
+      "      vpc_id:                                    \"${var.vpc_id}\"\r\n\u001b[0m\r\n"
+    ],
+    [
+      0.00012,
+      "\u001b[0m\u001b[32m  \u001b[32m+\u001b[0m \u001b[32mmodule.aws_sg_rds_mariadb_default.aws_security_group.default\r\n"
+    ],
+    [
+      0.000115,
+      "\u001b[0m      id:                                        <computed>\r\n"
+    ],
+    [
+      0.000126,
+      "      description:                               \"ditwl - Default Security Group RDS MariaDB\"\r\n"
+    ],
+    [
+      0.000142,
+      "      egress.#:                                  <computed>\r\n"
+    ],
+    [
+      9.5e-05,
+      "      ingress.#:                                 <computed>\r\n"
+    ],
+    [
+      0.000138,
+      "      name:                                      \"ditwl-sg-rds-mariadb-def\"\r\n"
+    ],
+    [
+      8.3e-05,
+      "      owner_id:                                  <computed>\r\n"
+    ],
+    [
+      0.000101,
+      "      revoke_rules_on_delete:                    \"false\"\r\n"
+    ],
+    [
+      0.000103,
+      "      tags.%:                                    \"1\"\r\n"
+    ],
+    [
+      7e-05,
+      "      tags.Name:                                 \"ditwl-sg-rds-mariadb-def\"\r\n"
+    ],
+    [
+      8.1e-05,
+      "      vpc_id:                                    \"${var.vpc_id}\"\r\n\u001b[0m\r\n"
+    ],
+    [
+      0.000129,
+      "\u001b[0m\u001b[32m  \u001b[32m+\u001b[0m \u001b[32mmodule.aws_sg_rds_mariadb_default.aws_security_group_rule.all_outbund\r\n"
+    ],
+    [
+      8.8e-05,
+      "\u001b[0m      id:                                        <computed>\r\n"
+    ],
+    [
+      7.9e-05,
+      "      cidr_blocks.#:                             \"1\"\r\n"
+    ],
+    [
+      0.000116,
+      "      cidr_blocks.0:                             \"0.0.0.0/0\"\r\n"
+    ],
+    [
+      0.000196,
+      "      description:                               \"Allow all outbound traffic\"\r\n"
+    ],
+    [
+      9.2e-05,
+      "      from_port:                                 \"0\"\r\n"
+    ],
+    [
+      0.000106,
+      "      protocol:                                  \"-1\"\r\n"
+    ],
+    [
+      0.000124,
+      "      security_group_id:                         \"${aws_security_group.default.id}\"\r\n"
+    ],
+    [
+      0.000103,
+      "      self:                                      \"false\"\r\n"
+    ],
+    [
+      0.000103,
+      "      source_security_group_id:                  <computed>\r\n"
+    ],
+    [
+      0.000105,
+      "      to_port:                                   \"0\"\r\n      type:                                      \"egress\"\r\n"
+    ],
+    [
+      2.2e-05,
+      "\u001b[0m\r\n"
+    ],
+    [
+      0.000198,
+      "\u001b[0m\u001b[32m  \u001b[32m+\u001b[0m \u001b[32mmodule.aws_sg_rds_mariadb_pro_pub_01.aws_security_group.default\r\n"
+    ],
+    [
+      0.000132,
+      "\u001b[0m      id:                                        <computed>\r\n"
+    ],
+    [
+      0.000134,
+      "      description:                               \"ditwl - MariaDb server access rules - Pub, Env: PRO\"\r\n"
+    ],
+    [
+      0.000112,
+      "      egress.#:                                  <computed>\r\n"
+    ],
+    [
+      0.00012,
+      "      ingress.#:                                 <computed>\r\n"
+    ],
+    [
+      0.000147,
+      "      name:                                      \"ditwl-aws-sg-rds-mariadb-pro-pub-01\"\r\n"
+    ],
+    [
+      9.1e-05,
+      "      owner_id:                                  <computed>\r\n"
+    ],
+    [
+      0.000107,
+      "      revoke_rules_on_delete:                    \"false\"\r\n"
+    ],
+    [
+      0.000101,
+      "      tags.%:                                    \"1\"\r\n"
+    ],
+    [
+      0.000147,
+      "      tags.Name:                                 \"ditwl-aws-sg-rds-mariadb-pro-pub-01\"\r\n"
+    ],
+    [
+      0.000131,
+      "      vpc_id:                                    \"${var.vpc_id}\"\r\n"
+    ],
+    [
+      2.9e-05,
+      "\u001b[0m\r\n"
+    ],
+    [
+      0.000164,
+      "\u001b[0m\u001b[32m  \u001b[32m+\u001b[0m \u001b[32mmodule.aws_sn_za_pro_pri_34.aws_subnet.default\r\n"
+    ],
+    [
+      0.000135,
+      "\u001b[0m      id:                                        <computed>\r\n"
+    ],
+    [
+      0.00017,
+      "      assign_ipv6_address_on_creation:           \"false\"\r\n"
+    ],
+    [
+      0.000147,
+      "      availability_zone:                         \"us-east-1a\"\r\n"
+    ],
+    [
+      0.000118,
+      "      cidr_block:                                \"172.17.34.0/23\"\r\n"
+    ],
+    [
+      0.000103,
+      "      ipv6_cidr_block:                           <computed>\r\n"
+    ],
+    [
+      0.000151,
+      "      ipv6_cidr_block_association_id:            <computed>\r\n"
+    ],
+    [
+      0.000129,
+      "      map_public_ip_on_launch:                   \"false\"\r\n"
+    ],
+    [
+      0.000134,
+      "      tags.%:                                    \"1\"\r\n"
+    ],
+    [
+      0.000155,
+      "      tags.Name:                                 \"ditwl-sn-za-pro-pri-34\"\r\n"
+    ],
+    [
+      0.000116,
+      "      vpc_id:                                    \"${var.vpc_id}\"\r\n"
+    ],
+    [
+      3.2e-05,
+      "\u001b[0m\r\n"
+    ],
+    [
+      0.000156,
+      "\u001b[0m\u001b[32m  \u001b[32m+\u001b[0m \u001b[32mmodule.aws_sn_za_pro_pub_32.aws_subnet.default\r\n"
+    ],
+    [
+      0.000149,
+      "\u001b[0m      id:                                        <computed>\r\n"
+    ],
+    [
+      9.7e-05,
+      "      assign_ipv6_address_on_creation:           \"false\"\r\n"
+    ],
+    [
+      0.000121,
+      "      availability_zone:                         \"us-east-1a\"\r\n"
+    ],
+    [
+      0.000121,
+      "      cidr_block:                                \"172.17.32.0/23\"\r\n"
+    ],
+    [
+      9.8e-05,
+      "      ipv6_cidr_block:                           <computed>\r\n"
+    ],
+    [
+      0.000107,
+      "      ipv6_cidr_block_association_id:            <computed>\r\n"
+    ],
+    [
+      9.9e-05,
+      "      map_public_ip_on_launch:                   \"true\"\r\n"
+    ],
+    [
+      5.4e-05,
+      "      tags.%:                                    \"1\"\r\n"
+    ],
+    [
+      0.00011,
+      "      tags.Name:                                 \"ditwl-sn-za-pro-pub-32\"\r\n"
+    ],
+    [
+      0.00011,
+      "      vpc_id:                                    \"${var.vpc_id}\"\r\n\u001b[0m\r\n"
+    ],
+    [
+      0.000118,
+      "\u001b[0m\u001b[32m  \u001b[32m+\u001b[0m \u001b[32mmodule.aws_sn_zb_pro_pri_38.aws_subnet.default\r\n"
+    ],
+    [
+      0.000222,
+      "\u001b[0m      id:                                        <computed>\r\n"
+    ],
+    [
+      9.9e-05,
+      "      assign_ipv6_address_on_creation:           \"false\"\r\n"
+    ],
+    [
+      9.7e-05,
+      "      availability_zone:                         \"us-east-1b\"\r\n"
+    ],
+    [
+      0.000127,
+      "      cidr_block:                                \"172.17.38.0/23\"\r\n"
+    ],
+    [
+      0.00011,
+      "      ipv6_cidr_block:                           <computed>\r\n"
+    ],
+    [
+      0.000102,
+      "      ipv6_cidr_block_association_id:            <computed>\r\n"
+    ],
+    [
+      3e-05,
+      "      map_public_ip_on_launch:                   \"false\"\r\n"
+    ],
+    [
+      0.000148,
+      "      tags.%:                                    \"1\"\r\n"
+    ],
+    [
+      0.000134,
+      "      tags.Name:                                 \"ditwl-sn-zb-pro-pri-38\"\r\n"
+    ],
+    [
+      0.000108,
+      "      vpc_id:                                    \"${var.vpc_id}\"\r\n\u001b[0m\r\n"
+    ],
+    [
+      0.000105,
+      "\u001b[0m\u001b[32m  \u001b[32m+\u001b[0m \u001b[32mmodule.aws_sn_zb_pro_pub_36.aws_subnet.default\r\n"
+    ],
+    [
+      0.000103,
+      "\u001b[0m      id:                                        <computed>\r\n"
+    ],
+    [
+      0.000143,
+      "      assign_ipv6_address_on_creation:           \"false\"\r\n"
+    ],
+    [
+      2.5e-05,
+      "      availability_zone:                         \"us-east-1b\"\r\n"
+    ],
+    [
+      9.8e-05,
+      "      cidr_block:                                \"172.17.36.0/23\"\r\n"
+    ],
+    [
+      9.8e-05,
+      "      ipv6_cidr_block:                           <computed>\r\n"
+    ],
+    [
+      8.9e-05,
+      "      ipv6_cidr_block_association_id:            <computed>\r\n"
+    ],
+    [
+      0.000118,
+      "      map_public_ip_on_launch:                   \"false\"\r\n"
+    ],
+    [
+      0.000114,
+      "      tags.%:                                    \"1\"\r\n"
+    ],
+    [
+      0.000141,
+      "      tags.Name:                                 \"ditwl-sn-zb-pro-pub-36\"\r\n"
+    ],
+    [
+      0.000134,
+      "      vpc_id:                                    \"${var.vpc_id}\"\r\n"
+    ],
+    [
+      3.7e-05,
+      "\u001b[0m\r\n"
+    ],
+    [
+      0.000144,
+      "\u001b[0m\u001b[32m  \u001b[32m+\u001b[0m \u001b[32mmodule.aws_sr_ec2_default_internet_to_ssh.aws_security_group_rule.default\r\n"
+    ],
+    [
+      0.000118,
+      "\u001b[0m      id:                                        <computed>\r\n"
+    ],
+    [
+      0.000112,
+      "      cidr_blocks.#:                             \"1\"\r\n"
+    ],
+    [
+      0.000146,
+      "      cidr_blocks.0:                             \"79.146.254.163/32\"\r\n"
+    ],
+    [
+      0.000182,
+      "      description:                               \"Access from Internet to SSH port\"\r\n"
+    ],
+    [
+      0.000113,
+      "      from_port:                                 \"22\"\r\n"
+    ],
+    [
+      7.7e-05,
+      "      protocol:                                  \"tcp\"\r\n"
+    ],
+    [
+      0.000101,
+      "      security_group_id:                         \"${var.security_group_id}\"\r\n"
+    ],
+    [
+      8.4e-05,
+      "      self:                                      \"false\"\r\n"
+    ],
+    [
+      8.3e-05,
+      "      source_security_group_id:                  <computed>\r\n"
+    ],
+    [
+      7.6e-05,
+      "      to_port:                                   \"22\"\r\n"
+    ],
+    [
+      8.1e-05,
+      "      type:                                      \"ingress\"\r\n"
+    ],
+    [
+      3.4e-05,
+      "\u001b[0m\r\n"
+    ],
+    [
+      0.000119,
+      "\u001b[0m\u001b[32m  \u001b[32m+\u001b[0m \u001b[32mmodule.aws_sr_ec2_pro_pub_wp_01_internet_to_443.aws_security_group_rule.default\r\n"
+    ],
+    [
+      9.2e-05,
+      "\u001b[0m      id:                                        <computed>\r\n"
+    ],
+    [
+      8e-05,
+      "      cidr_blocks.#:                             \"1\"\r\n"
+    ],
+    [
+      8.6e-05,
+      "      cidr_blocks.0:                             \"0.0.0.0/0\"\r\n"
+    ],
+    [
+      0.000103,
+      "      description:                               \"Access from Internet to port 443\"\r\n"
+    ],
+    [
+      8.2e-05,
+      "      from_port:                                 \"443\"\r\n"
+    ],
+    [
+      8.2e-05,
+      "      protocol:                                  \"tcp\"\r\n"
+    ],
+    [
+      0.000102,
+      "      security_group_id:                         \"${var.security_group_id}\"\r\n"
+    ],
+    [
+      7.9e-05,
+      "      self:                                      \"false\"\r\n"
+    ],
+    [
+      8.4e-05,
+      "      source_security_group_id:                  <computed>\r\n"
+    ],
+    [
+      8e-05,
+      "      to_port:                                   \"443\"\r\n"
+    ],
+    [
+      8.1e-05,
+      "      type:                                      \"ingress\"\r\n"
+    ],
+    [
+      2.8e-05,
+      "\u001b[0m\r\n"
+    ],
+    [
+      0.000129,
+      "\u001b[0m\u001b[32m  \u001b[32m+\u001b[0m \u001b[32mmodule.aws_sr_ec2_pro_pub_wp_01_internet_to_80.aws_security_group_rule.default\r\n"
+    ],
+    [
+      8.3e-05,
+      "\u001b[0m      id:                                        <computed>\r\n"
+    ],
+    [
+      8.2e-05,
+      "      cidr_blocks.#:                             \"1\"\r\n"
+    ],
+    [
+      8.4e-05,
+      "      cidr_blocks.0:                             \"0.0.0.0/0\"\r\n"
+    ],
+    [
+      0.00011,
+      "      description:                               \"Access from Internet to port 80\"\r\n"
+    ],
+    [
+      7.8e-05,
+      "      from_port:                                 \"80\"\r\n"
+    ],
+    [
+      0.000103,
+      "      protocol:                                  \"tcp\"\r\n"
+    ],
+    [
+      0.000112,
+      "      security_group_id:                         \"${var.security_group_id}\"\r\n"
+    ],
+    [
+      9.2e-05,
+      "      self:                                      \"false\"\r\n"
+    ],
+    [
+      0.000104,
+      "      source_security_group_id:                  <computed>\r\n"
+    ],
+    [
+      8.5e-05,
+      "      to_port:                                   \"80\"\r\n"
+    ],
+    [
+      0.000167,
+      "      type:                                      \"ingress\"\r\n\u001b[0m\r\n"
+    ],
+    [
+      0.000214,
+      "\u001b[0m\u001b[32m  \u001b[32m+\u001b[0m \u001b[32mmodule.aws_sr_rds_mariadb_default_internet_to_db_port.aws_security_group_rule.default\r\n"
+    ],
+    [
+      9.6e-05,
+      "\u001b[0m      id:                                        <computed>\r\n"
+    ],
+    [
+      8.1e-05,
+      "      cidr_blocks.#:                             \"1\"\r\n"
+    ],
+    [
+      8.1e-05,
+      "      cidr_blocks.0:                             \"79.146.254.163/32\"\r\n"
+    ],
+    [
+      0.000102,
+      "      description:                               \"Access from My Internet IP to DB port\"\r\n"
+    ],
+    [
+      7.7e-05,
+      "      from_port:                                 \"3306\"\r\n"
+    ],
+    [
+      5.5e-05,
+      "      protocol:                                  \"tcp\"\r\n"
+    ],
+    [
+      9.2e-05,
+      "      security_group_id:                         \"${var.security_group_id}\"\r\n"
+    ],
+    [
+      7.7e-05,
+      "      self:                                      \"false\"\r\n"
+    ],
+    [
+      6.2e-05,
+      "      source_security_group_id:                  <computed>\r\n"
+    ],
+    [
+      6.6e-05,
+      "      to_port:                                   \"3306\"\r\n"
+    ],
+    [
+      7.8e-05,
+      "      type:                                      \"ingress\"\r\n\u001b[0m\r\n"
+    ],
+    [
+      0.000144,
+      "\u001b[0m\u001b[32m  \u001b[32m+\u001b[0m \u001b[32mmodule.aws_sr_rds_mariadb_pro_pub_01_instances_to_db_port.aws_security_group_rule.default\r\n"
+    ],
+    [
+      8e-05,
+      "\u001b[0m      id:                                        <computed>\r\n"
+    ],
+    [
+      9.8e-05,
+      "      description:                               \"Access from Instances to DB port\"\r\n"
+    ],
+    [
+      6.8e-05,
+      "      from_port:                                 \"3306\"\r\n"
+    ],
+    [
+      6.6e-05,
+      "      protocol:                                  \"tcp\"\r\n"
+    ],
+    [
+      8.6e-05,
+      "      security_group_id:                         \"${var.security_group_id}\"\r\n"
+    ],
+    [
+      7.1e-05,
+      "      self:                                      \"false\"\r\n"
+    ],
+    [
+      9.2e-05,
+      "      source_security_group_id:                  \"${var.source_security_group_id}\"\r\n"
+    ],
+    [
+      0.000214,
+      "      to_port:                                   \"3306\"\r\n"
+    ],
+    [
+      6.9e-05,
+      "      type:                                      \"ingress\"\r\n\u001b[0m\r\n"
+    ],
+    [
+      2.1e-05,
+      "\u001b[0m\r\n"
+    ],
+    [
+      7.8e-05,
+      "\u001b[0m\u001b[1mPlan:\u001b[0m 31 to add, 0 to change, 0 to destroy.\u001b[0m\r\n\r\n"
+    ],
+    [
+      0.000167,
+      "------------------------------------------------------------------------\r\n\r\n"
+    ],
+    [
+      0.000101,
+      "Note: You didn't specify an \"-out\" parameter to save this plan, so Terraform\r\n"
+    ],
+    [
+      7.7e-05,
+      "can't guarantee that exactly these actions will be performed if\r\n"
+    ],
+    [
+      0.000489,
+      "\"terraform apply\" is subsequently run.\r\n"
+    ],
+    [
+      3.9e-05,
+      "\r\n"
+    ]
+  ],
+  "width": 101,
+  "command": null,
+  "height": 46,
+  "title": null,
+  "env": {
+    "TERM": "xterm",
+    "SHELL": "/bin/bash"
+  },
+  "version": 1,
+  "duration": 19.977302
+}

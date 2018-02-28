@@ -117,7 +117,7 @@ aws_private_route_table_zb_name = "ditwl-rt-pri-zb"
   #------------------------
   # Default EC2
   #------------------------
-  aws_sec_group_ec2_default = {
+  aws_sg_ec2_default = {
     sec_name        = "ditwl-sg-ec2-def"
     sec_description = "ditwl - Default Security Group - Env: PRO"
     allow_all_outbound = true
@@ -125,7 +125,7 @@ aws_private_route_table_zb_name = "ditwl-rt-pri-zb"
     #------------------------
     # Allow SSH from my Internet IP to ...
     #------------------------
-    sec_rule_ec2_default_internet_to_ssh = {
+    aws_sr_ec2_default_internet_to_ssh = {
       type              = "ingress"
       from_port         = "22"
       to_port           = "22"
@@ -200,7 +200,7 @@ aws_private_route_table_zb_name = "ditwl-rt-pri-zb"
     allow_all_outbound = false
   }
     #------------------------
-    # Allow access from my Internet IP to DB port
+    # Allow access from my Instances to DB port
     #------------------------
     aws_sr_rds_mariadb_pro_pub_01_instances_to_db_port = {
       type              = "ingress"
@@ -222,8 +222,8 @@ aws_private_route_table_zb_name = "ditwl-rt-pri-zb"
 
   aws_ec2_pro_pub_wp_01 = {
     name              = "ditwl-ec2-pro-pub-wp01"
-    ami               = ""
-    instance_type     = "t2.micro" //AWS Free Tier: 750 hours per month of Linux, RHEL, or SLES t2.micro instance usage
+    ami               = "" #Uses "${data.aws_ami.ubuntu1604.id}"
+    instance_type     = "t2.micro" #AWS Free Tier: 750 hours per month of Linux, RHEL, or SLES t2.micro instance usage
     availability_zone = "us-east-1a"
     key_name          = "ditwl_kp_infradmin"
     # vpc_security_group_ids = SEE TF file
@@ -250,12 +250,12 @@ aws_private_route_table_zb_name = "ditwl-rt-pri-zb"
   # WP PRO Security Group
   #------------------------
   aws_sg_ec2_pro_pub_wp_01 = {
-    sec_name        = "ditwl-aws-sg-rds-mariadb-pro-pub-01"
-    sec_description = "ditwl - MariaDb server access rules - Pub, Env: PRO"
+    sec_name        = "ditwl-sg-ec2-pro-pub-01"
+    sec_description = "ditwl - WP server access rules - Pub, Env: PRO"
     allow_all_outbound = false
   }
 
-  aws_sre_ec2_pro_pub_wp_01_internet_to_80 = {
+  aws_sr_ec2_pro_pub_wp_01_internet_to_80 = {
     type              = "ingress"
     from_port         = 80
     to_port           = 80
@@ -264,7 +264,7 @@ aws_private_route_table_zb_name = "ditwl-rt-pri-zb"
     description       = "Access from Internet to port 80"
   }
 
-  aws_sre_ec2_pro_pub_wp_01_internet_to_443 = {
+  aws_sr_ec2_pro_pub_wp_01_internet_to_443 = {
     type              = "ingress"
     from_port         = 443
     to_port           = 443

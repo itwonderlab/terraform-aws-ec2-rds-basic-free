@@ -19,27 +19,27 @@
   # Rules
 
   # Access from Internet to port 80 (for redirection)
-  module "aws_sre_ec2_pro_pub_wp_01_internet_to_80" {
+  module "aws_sr_ec2_pro_pub_wp_01_internet_to_80" {
     source            = "./modules/aws/security/rule/cidr_blocks"
     security_group_id = "${module.aws_sg_ec2_pro_pub_wp_01.id}"
-    type              = "${var.aws_sre_ec2_pro_pub_wp_01_internet_to_80["type"]}"
-    from_port         = "${var.aws_sre_ec2_pro_pub_wp_01_internet_to_80["from_port"]}"
-    to_port           = "${var.aws_sre_ec2_pro_pub_wp_01_internet_to_80["to_port"]}"
-    protocol          = "${var.aws_sre_ec2_pro_pub_wp_01_internet_to_80["protocol"]}"
-    cidr_blocks       = "${var.aws_sre_ec2_pro_pub_wp_01_internet_to_80["cidr_blocks"]}"
-    description       = "${var.aws_sre_ec2_pro_pub_wp_01_internet_to_80["description"]}"
+    type              = "${var.aws_sr_ec2_pro_pub_wp_01_internet_to_80["type"]}"
+    from_port         = "${var.aws_sr_ec2_pro_pub_wp_01_internet_to_80["from_port"]}"
+    to_port           = "${var.aws_sr_ec2_pro_pub_wp_01_internet_to_80["to_port"]}"
+    protocol          = "${var.aws_sr_ec2_pro_pub_wp_01_internet_to_80["protocol"]}"
+    cidr_blocks       = "${var.aws_sr_ec2_pro_pub_wp_01_internet_to_80["cidr_blocks"]}"
+    description       = "${var.aws_sr_ec2_pro_pub_wp_01_internet_to_80["description"]}"
   }
 
   # Access from Internet to port 443
-  module "aws_sre_ec2_pro_pub_wp_01_internet_to_443" {
+  module "aws_sr_ec2_pro_pub_wp_01_internet_to_443" {
     source            = "./modules/aws/security/rule/cidr_blocks"
     security_group_id = "${module.aws_sg_ec2_pro_pub_wp_01.id}"
-    type              = "${var.aws_sre_ec2_pro_pub_wp_01_internet_to_443["type"]}"
-    from_port         = "${var.aws_sre_ec2_pro_pub_wp_01_internet_to_443["from_port"]}"
-    to_port           = "${var.aws_sre_ec2_pro_pub_wp_01_internet_to_443["to_port"]}"
-    protocol          = "${var.aws_sre_ec2_pro_pub_wp_01_internet_to_443["protocol"]}"
-    cidr_blocks       = "${var.aws_sre_ec2_pro_pub_wp_01_internet_to_443["cidr_blocks"]}"
-    description       = "${var.aws_sre_ec2_pro_pub_wp_01_internet_to_443["description"]}"
+    type              = "${var.aws_sr_ec2_pro_pub_wp_01_internet_to_443["type"]}"
+    from_port         = "${var.aws_sr_ec2_pro_pub_wp_01_internet_to_443["from_port"]}"
+    to_port           = "${var.aws_sr_ec2_pro_pub_wp_01_internet_to_443["to_port"]}"
+    protocol          = "${var.aws_sr_ec2_pro_pub_wp_01_internet_to_443["protocol"]}"
+    cidr_blocks       = "${var.aws_sr_ec2_pro_pub_wp_01_internet_to_443["cidr_blocks"]}"
+    description       = "${var.aws_sr_ec2_pro_pub_wp_01_internet_to_443["description"]}"
   }
 
 
@@ -52,7 +52,7 @@
     availability_zone = "${var.aws_ec2_pro_pub_wp_01["availability_zone"]}"
     key_name          = "${var.aws_ec2_pro_pub_wp_01["key_name"]}"
     disable_api_termination = "${var.is_production ? true : false}"
-    vpc_security_group_ids = ["${module.aws_sec_group_ec2_default.id}","${module.aws_sg_ec2_pro_pub_wp_01.id}"]
+    vpc_security_group_ids = ["${module.aws_sg_ec2_default.id}","${module.aws_sg_ec2_pro_pub_wp_01.id}"]
     subnet_id         = "${module.aws_sn_za_pro_pub_32.id}"
     associate_public_ip_address = "${var.aws_ec2_pro_pub_wp_01["associate_public_ip_address"]}"
     instance_tags     = {}

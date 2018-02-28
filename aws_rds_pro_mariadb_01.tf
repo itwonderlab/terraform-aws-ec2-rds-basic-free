@@ -25,7 +25,7 @@
     from_port         = "${var.aws_sr_rds_mariadb_pro_pub_01_instances_to_db_port["from_port"]}"
     to_port           = "${var.aws_sr_rds_mariadb_pro_pub_01_instances_to_db_port["to_port"]}"
     protocol          = "${var.aws_sr_rds_mariadb_pro_pub_01_instances_to_db_port["protocol"]}"
-    source_security_group_id = "${module.aws_sec_group_ec2_default.id}"
+    source_security_group_id = "${module.aws_sg_ec2_default.id}"
     description       = "${var.aws_sr_rds_mariadb_pro_pub_01_instances_to_db_port["description"]}"
   }
 

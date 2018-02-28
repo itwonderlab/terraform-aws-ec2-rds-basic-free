@@ -17,12 +17,12 @@ variable "aws_sg_ec2_pro_pub_wp_01" {
   type        = "map"
 }
 
-variable "aws_sre_ec2_pro_pub_wp_01_internet_to_80" {
+variable "aws_sr_ec2_pro_pub_wp_01_internet_to_80" {
   description = "Access from Internet to port 80"
   type        = "map"
 }
 
-variable "aws_sre_ec2_pro_pub_wp_01_internet_to_443" {
+variable "aws_sr_ec2_pro_pub_wp_01_internet_to_443" {
   description = "Access from Internet to port 443"
   type        = "map"
 }
