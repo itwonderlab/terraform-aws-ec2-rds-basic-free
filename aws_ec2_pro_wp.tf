@@ -61,6 +61,7 @@
     tag_app           = "${var.aws_ec2_pro_pub_wp_01["tag_app"]}"
     tag_app_id        = "${var.aws_ec2_pro_pub_wp_01["tag_app_id"]}"
     tag_os            = "${var.aws_ec2_pro_pub_wp_01["tag_os"]}"
+    tag_os_id         = "${var.aws_ec2_pro_pub_wp_01["tag_os_id"]}"
     tags_environment  = "${var.aws_ec2_pro_pub_wp_01["tags_environment"]}"
     tag_cost_center   = "${var.aws_ec2_pro_pub_wp_01["tag_cost_center"]}"
 

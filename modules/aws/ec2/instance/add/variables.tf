@@ -121,6 +121,9 @@ variable "tag_app_id" {
 variable "tag_os" {
       description = "(Mandatory) Operating System"
 }
+variable "tag_os_id" {
+      description = "(Mandatory) Operating System ID"
+}
 variable "tag_cost_center" {
       description = "(Mandatory) Cost Center for billing"
 }

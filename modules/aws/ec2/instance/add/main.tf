@@ -73,6 +73,7 @@ resource "aws_instance" "default" {
     map("app"         , var.tag_app),
     map("app_id"      , var.tag_app_id),
     map("os"          , var.tag_os),
+    map("os_id"       , var.tag_os_id),
     map("cost_center" , var.tag_cost_center)
     )}"
 
