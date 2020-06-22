@@ -13,7 +13,7 @@ variable "aws_main_route_table_name" {
 
 variable "aws_internet_route" {
   description = "Internet route"
-  type        = "map"
+  type        = map
 }
 
 variable "aws_private_route_table_za_name" {

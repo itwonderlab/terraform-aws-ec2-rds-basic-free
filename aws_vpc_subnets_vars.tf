@@ -10,21 +10,21 @@
 #Zone: A, Env: PRO, Type: PUBLIC, Code: 32
 variable "aws_sn_za_pro_pub_32" {
   description = "Zone: A, Env: PRO, Type: PUBLIC, Code: 32"
-  type        = "map"
+  type        = map
 }
 #Zone: A, Env: PRO, Type: PRIVATE, Code: 34
 variable "aws_sn_za_pro_pri_34" {
   description = "Zone: A, Env: PRO, Type: PRIVATE, Code: 34"
-  type        = "map"
+  type        = map
 }
 
 #Zone: B, Env: PRO, Type: PUBLIC, Code: 36
 variable "aws_sn_zb_pro_pub_36" {
   description = "Zone: B, Env: PRO, Type: PUBLIC, Code: 36"
-  type        = "map"
+  type        = map
 }
 #Zone: B, Env: PRO, Type: PRIVATE, Code: 38
 variable "aws_sn_zb_pro_pri_38" {
   description = "Zone: B, Env: PRO, Type: PRIVATE, Code: 38"
-  type        = "map"
+  type        = map
 }

@@ -8,5 +8,5 @@
 # ---------------------------------------------------
 
 output "id" {
-  value = "${aws_route_table.default.id}"
+  value = aws_route_table.default.id
 }

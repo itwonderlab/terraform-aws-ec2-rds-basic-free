@@ -75,7 +75,7 @@ is_production = false
       description = "ditwl-RDS-SN-pub-PRO-01"
 
       #See aws_rds_sn_pro.tf for subnet_ids
-      #subnet_ids  = ${module.aws_sn_za_pro_pub_32.id},${module.aws_sn_zb_pro_pub_36.id}"
+      #subnet_ids  = ${module.aws_sn_za_pro_pub_32.id},${module.aws_sn_zb_pro_pub_36.id
     }
 
 
@@ -130,7 +130,7 @@ aws_private_route_table_zb_name = "ditwl-rt-pri-zb"
       from_port         = "22"
       to_port           = "22"
       protocol          = "tcp"
-      cidr_blocks       = "" #"${data.external.whatismyip.result["internet_ip"]}/32"
+      cidr_blocks       = "" #data.external.whatismyip.result["internet_ip"]}/32"
       description       = "Access from Internet to SSH port"
     }
 
@@ -150,7 +150,7 @@ aws_private_route_table_zb_name = "ditwl-rt-pri-zb"
         from_port         = "3306"
         to_port           = "3306"
         protocol          = "tcp"
-        cidr_blocks       = "" #"${data.external.whatismyip.result["internet_ip"]}/32"
+        cidr_blocks       = "" #data.external.whatismyip.result["internet_ip"]}/32"
         description       = "Access from My Internet IP to DB port"
       }
 
@@ -176,11 +176,11 @@ aws_private_route_table_zb_name = "ditwl-rt-pri-zb"
     username                = "ditwlRDSPROdb01" #Start with a letter. Only numbers, letters, and _ accepted, 1 to 16 characters long
     availability_zone       = "us-east-1a"
     backup_retention_period = 5
-    #db_subnet_group_name   = See var "${var.aws_rds_sn_pro_01["name"]}"
+    #db_subnet_group_name   = See var aws_rds_sn_pro_01["name"]
     multi_az                = false
     vpc_security_group_ids  = ""
     parameter_group_name    = ""
-    allow_major_version_up  = ""
+    allow_major_version_up  = false
     publicly_accessible     = true
     tag_private_name        = "ditwl-rds-mariadb-pro-pub-01"
     tag_public_name         = "ditwl-rds-mariadb-pro-pub-01"
@@ -207,7 +207,7 @@ aws_private_route_table_zb_name = "ditwl-rt-pri-zb"
       from_port         = "3306"
       to_port           = "3306"
       protocol          = "tcp"
-      #source_security_group_id "${module.aws_sec_group_ec2_default.id}"
+      #source_security_group_id module.aws_sec_group_ec2_default.id
       description       = "Access from Instances to DB port"
     }
 
@@ -222,7 +222,7 @@ aws_private_route_table_zb_name = "ditwl-rt-pri-zb"
 
   aws_ec2_pro_pub_wp_01 = {
     name              = "ditwl-ec2-pro-pub-wp01"
-    ami               = "" #Uses "${data.aws_ami.ubuntu1604.id}"
+    ami               = "" #Uses data.aws_ami.ubuntu1604.id
     instance_type     = "t2.micro" #AWS Free Tier: 750 hours per month of Linux, RHEL, or SLES t2.micro instance usage
     availability_zone = "us-east-1a"
     key_name          = "ditwl_kp_infradmin"

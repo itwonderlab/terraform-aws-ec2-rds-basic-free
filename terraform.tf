@@ -12,5 +12,5 @@
 # Detail: https://www.terraform.io/docs/configuration/terraform.html
 
 terraform {
-  required_version = "~> 0.11" #cannot contain interpolations. Means requiered version >= 0.11 and < 0.12
+  required_version = "~> 0.12" #cannot contain interpolations. Means requiered version >= 0.12 and < 0.13
 }

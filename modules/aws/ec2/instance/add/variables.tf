@@ -12,7 +12,7 @@ variable "ami" {
   description = "(Required) The AMI to use for the instance."
 }
 
-variable "count" {
+variable "instance_count" {
   description = "Number of instances"
   default     = 1
 }
@@ -62,7 +62,7 @@ variable "monitoring" {
 
 variable "vpc_security_group_ids" {
   description = "(Optional) A list of security group IDs to associate with. "
-  type        = "list"
+  type        = list
 }
 
 variable "subnet_id" {
@@ -150,6 +150,7 @@ variable "ephemeral_block_device" {
 
 variable "register_dns_private" {
   description = "(Optional) Register in private DNS using tag_private_name and private IP"
+  type = bool
   default = true
 }
 
@@ -160,6 +161,7 @@ variable "route53_private_zone_id" {
 
 variable "register_dns_public" {
   description = "(Optional) Register in private DNS using tag_public_name and public IP"
+  type = bool
   default = false
 }
 
@@ -170,6 +172,12 @@ variable "route53_public_zone_id" {
 
 variable "ignore_changes" {
   description = "(Optional) A list of properties for ignore_changes in lifecycle"
-  type        = "list"
+  type        = list
   default     = []
 }
+
+locals{
+    register_dns_public_each =  tomap({"is" = var.register_dns_public})
+    register_dns_private_each =  tomap({"is" = var.register_dns_private})
+}
+

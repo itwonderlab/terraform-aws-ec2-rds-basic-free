@@ -95,7 +95,7 @@ variable publicly_accessible {
 
 variable vpc_security_group_ids {
   description = "(Optional) List of VPC security groups to associate."
-  type        = "list"
+  type        = list
 }
 
 variable db_subnet_group_name {
@@ -120,12 +120,12 @@ variable apply_immediately {
 
 variable auto_minor_version_upgrade {
   description = "(Optional) Indicates that minor engine upgrades will be applied automatically to the DB instance during the maintenance window. Defaults to true."
-  default     = "true"
+  default     = true
 }
 
 variable allow_major_version_up {
   description = "(Optional) Indicates that major version upgrades are allowed. Changing this parameter does not result in an outage and the change is asynchronously applied as soon as possible."
-  default     = "false"
+  default     = false
 }
 
 variable "instance_tags" {

@@ -9,10 +9,10 @@
 
 output "id" {
   description = "The instance IDs"
-  value       = ["${aws_instance.default.*.id}"]
+  value       = [aws_instance.default.*.id]
 }
 
 output "availability_zone" {
   description = "The availability zone of the instances"
-  value       = ["${aws_instance.default.*.availability_zone}"]
+  value       = [aws_instance.default.*.availability_zone]
 }

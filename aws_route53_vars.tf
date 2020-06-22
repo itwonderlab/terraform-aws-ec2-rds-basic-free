@@ -18,5 +18,5 @@
 
   variable "aws_route53_public" {
     description = "Route 53 for public VPC DNS"
-    type        = "map"
+    type        = map
   } # public

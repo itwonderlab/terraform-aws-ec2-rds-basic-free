@@ -8,5 +8,5 @@
 #-----------------------------------------
 
 data "external" "whatismyip" {
-  program = ["${path.module}/whatismyip.sh"]
+  program = ["/bin/bash" , "${path.module}/whatismyip.sh"]
 }

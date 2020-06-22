@@ -8,7 +8,7 @@
 #--------------------------------------------------------
 # Use this data source to get the ID of the latests AMI for selected OS
 # Use this data source to get the ID of the latests AMI for selected OS
-# "${data.aws_ami.NAME.id}"
+# data.aws_ami.NAME.id
 
   # Ubuntu 16.04 HVM using EBS SSD
   # registered AMI for use in other resources.

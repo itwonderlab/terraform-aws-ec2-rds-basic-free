@@ -16,8 +16,8 @@
 # name_servers - A list of authoritative name servers for the hosted zone (effectively a list of NS records)
 
 output "id" {
-  value = "${aws_route53_delegation_set.public.id}"
+  value = aws_route53_delegation_set.public.id
 }
 output "name_servers" {
-  value = "${aws_route53_delegation_set.public.name_servers}"
+  value = aws_route53_delegation_set.public.name_servers
 }

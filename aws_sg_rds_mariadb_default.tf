@@ -12,22 +12,22 @@
   # Group
   module "aws_sg_rds_mariadb_default" {
     source      = "./modules/aws/security/group"
-    vpc_id      = "${module.aws_network_vpc.id}"
-    name        = "${var.aws_sg_rds_mariadb_default["sec_name"]}"
-    description = "${var.aws_sg_rds_mariadb_default["sec_description"]}"
-    allow_all_outbound = "${var.aws_sg_rds_mariadb_default["allow_all_outbound"]}"
+    vpc_id      = module.aws_network_vpc.id
+    name        = var.aws_sg_rds_mariadb_default["sec_name"]
+    description = var.aws_sg_rds_mariadb_default["sec_description"]
+    allow_all_outbound = var.aws_sg_rds_mariadb_default["allow_all_outbound"]
   }
 
   # Rules
   # Access from My IP to DB Port
   module "aws_sr_rds_mariadb_default_internet_to_db_port" {
     source            = "./modules/aws/security/rule/cidr_blocks"
-    security_group_id = "${module.aws_sg_rds_mariadb_default.id}"
-    type              = "${var.aws_sr_rds_mariadb_default_internet_to_db_port["type"]}"
-    from_port         = "${var.aws_sr_rds_mariadb_default_internet_to_db_port["from_port"]}"
-    to_port           = "${var.aws_sr_rds_mariadb_default_internet_to_db_port["to_port"]}"
-    protocol          = "${var.aws_sr_rds_mariadb_default_internet_to_db_port["protocol"]}"
-    cidr_blocks       = "${data.external.whatismyip.result["internet_ip"]}/32"
-    #"${var.sec_rule_ec2_default_internet_to_ssh["cidr_blocks"]}"
-    description       = "${var.aws_sr_rds_mariadb_default_internet_to_db_port["description"]}"
+    security_group_id = module.aws_sg_rds_mariadb_default.id
+    type              = var.aws_sr_rds_mariadb_default_internet_to_db_port["type"]
+    from_port         = var.aws_sr_rds_mariadb_default_internet_to_db_port["from_port"]
+    to_port           = var.aws_sr_rds_mariadb_default_internet_to_db_port["to_port"]
+    protocol          = var.aws_sr_rds_mariadb_default_internet_to_db_port["protocol"]
+    cidr_blocks       = [format("%s/%s",data.external.whatismyip.result["internet_ip"],32)]
+    #sec_rule_ec2_default_internet_to_ssh["cidr_blocks"]
+    description       = var.aws_sr_rds_mariadb_default_internet_to_db_port["description"]
   }

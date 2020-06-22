@@ -29,7 +29,9 @@ variable protocol {
 }
 
 # Allowed cidr_blocks
-variable cidr_blocks {}
+variable cidr_blocks {
+  type = list
+}
 
 # Description of the rule.
 variable description {}

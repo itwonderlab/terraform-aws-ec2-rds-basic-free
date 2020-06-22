@@ -8,10 +8,10 @@
 # ---------------------------------------------------
 
 resource "aws_route_table" "default" {
-  vpc_id = "${var.vpc_id}"
-  propagating_vgws = ["${var.propagating_vgws}"]
+  vpc_id = var.vpc_id
+  propagating_vgws = tolist(var.propagating_vgws)
 
-  tags {
-    Name = "${var.name}"
+  tags = {
+    Name = var.name
   }
 }
