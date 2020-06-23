@@ -16,7 +16,7 @@ is_production = false
   # DEFAULT AWS
   provider_default_aws_profile    = "ditwl_infradmin"
   provider_default_aws_region     = "us-east-1" #US East (N. Virginia), Cheapests region as https://www.concurrencylabs.com/blog/choose-your-aws-region-wisely/
-  provider_default_aws_account_id = ["431960152202"]
+  provider_default_aws_account_id = [""]
   provider_default_aws_shared_credentials_file = "~/.aws/credentials"
   provider_default_aws_key_file = "~/keys/ditwl_kp_infradmin.pem"
 
